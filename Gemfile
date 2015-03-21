@@ -7,7 +7,7 @@ gem 'rails', '3.2.21'
 
 gem 'sqlite3'
 
-gem 'bootstrap-sass', '2.1'
+gem 'bootstrap-sass', '~> 3.3.4'
 
 # Gems used only for assets and not required
 # in production environments by default.

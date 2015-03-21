@@ -1,25 +1,17 @@
-<div class="container">
-  <h3>好きな本を選んでください</h3>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>チェック</th>
-        <th>タイトル</th>
-        <th>画像</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>ちはやふる</td>
-        <td><%= image_tag('http://yuzuya.style.coocan.jp/blog/img/2012/1023/00.jpg', size: '100x100') %></td>
-      </tr>
-      <tr>
-    　　<td><input type="checkbox"></td>
-    　　<td>ワンピース</td>
-      　<td><%= image_tag('http://img.bookstore.c.yimg.jp/im_sigg_J7fYzJMVZ.yFNva5kSVRg---x200/ebook/db/8f/db8f2b5cdfb8fd4c514fe85a50c410cc0001_cover.jpg?db8f2b5cdfb8fd4c514fe85a50c410cc', size: '100x100') %></td></td>
-      </tr>
-    </tbody>
-  </table>
-  <button onclick="location.href='index2.html'" type="button" class="btn btn-danger">次へ</button>
-</div>
+<h3>好きな本を選んでください</h3>
+<% 2.times.each do %>
+  <div class="row">
+    <% 4.times.each do %>
+      <div class="col-md-3" style="text-align:center">
+        <%= image_tag('http://yuzuya.style.coocan.jp/blog/img/2012/1023/00.jpg', style: 'max-width: 200px; height: auto;') %>
+        <br>ちはやふる<br>
+        <div style="span:10px" class="btn-group" data-toggle="buttons-radio">
+          <button type="button" class="btn btn-info">好き</button>
+          <button type="button" class="btn btn-info">嫌い</button>
+          <button type="button" class="btn btn-info">読んでない</button>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<button onclick="location.href='index2.html'" type="button" class="btn btn-danger">次へ</button>
