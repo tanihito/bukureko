@@ -5,7 +5,7 @@ class WelcomeController < ApplicationController
   def result
     params[:book1] = 'like'
     params[:book2] = 'like'
-    params[:book3] = 'none'
+    params[:book3] = 'like'
 
     @books = [
       {name: 'ちはやふる', url: 'http://yuzuya.style.coocan.jp/blog/img/2012/1023/00.jpg'},

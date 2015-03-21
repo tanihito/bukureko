@@ -11,16 +11,16 @@
           <label class="btn btn-sky text-uppercase span4">
             <input type="radio" name="book_<%=book_num%>" value="like" class="btn ">好き
           </label>
-          <label class="btn btn-hot text-uppercase span4">
-            <input type="radio" name="book_<%=book_num%>" value="dislike" class="btn ">嫌い
-          </label>
           <label class="btn text-uppercase span4 active">
             <input type="radio" name="book_<%=book_num%>" value="none" class="btn ">読んでいない
+          </label>
+          <label class="btn btn-hot text-uppercase span4">
+            <input type="radio" name="book_<%=book_num%>" value="dislike" class="btn ">嫌い
           </label>
         </div>
       </div>
     <% end %>
   </div>
 <% end %>
-<button type="submit" class="btn btn-danger">次へ</button>
+<button id="submit-btn" type="submit" class="btn btn-danger">次へ</button>
 </form>
