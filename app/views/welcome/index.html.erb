@@ -1,26 +1,34 @@
 <h3>好きな本を選んでください</h3>
+
 <form action="./result" method="post" role="form">
   <% book_num = 0 %>
   <% 2.times.each do %>
     <div class="row">
       <% 4.times.each do %>
         <% book_num += 1 %>
-        <div class="col-md-3" style="text-align:center" class="form-group">
-          <%= image_tag('http://yuzuya.style.coocan.jp/blog/img/2012/1023/00.jpg', style: 'max-width: 200px; height: auto;') %>
-          <div data-toggle="buttons">
-            <label class="btn btn-sky text-uppercase span4">
-              <input type="radio" name="book<%=book_num%>" value="like" class="form-control">好き
-            </label>
-            <label class="btn text-uppercase span4">
-              <input type="radio" name="book<%=book_num%>" value="none" class="form-control" checked>読んでいない
-            </label>
-            <label class="btn btn-hot text-uppercase span4">
-              <input type="radio" name="book<%=book_num%>" value="dislike" class="form-control">嫌い
-            </label>
+        <div class="col-md-3" class="form-group">
+          <label for="book<%=book_num%>" class="control-label">
+            <%= image_tag('http://yuzuya.style.coocan.jp/blog/img/2012/1023/00.jpg', class: "img-responsive") %>
+          </lavel>
+          <div class="text-center">
+            <div data-toggle="buttons" class="btn-group">
+              <label class="btn btn-success">
+                <input type="radio" name="book<%=book_num%>" value="like" class="form-control">好き
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="book<%=book_num%>" value="none" class="form-control" checked>読んでいない
+              </label>
+              <label class="btn btn-danger">
+                <input type="radio" name="book<%=book_num%>" value="dislike" class="form-control">嫌い
+              </label>
+            </div>
           </div>
         </div>
       <% end %>
     </div>
   <% end %>
-  <input type="submit" class="btn btn-default" value="次へ" />
+
+  <div class="row">
+    <input type="submit" class="col-md-offset-4 col-md-4 btn-lg btn-primary" value="次へ" />
+  </div>
 </form>
