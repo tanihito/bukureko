@@ -4,17 +4,17 @@
 <% 2.times.each do %>
   <div class="row">
     <% 4.times.each do %>
-      <%= book_num += 1 %>
+      <% book_num += 1 %>
       <div class="col-md-3" style="text-align:center" id="book_<%=book_num%>">
         <%= image_tag('http://yuzuya.style.coocan.jp/blog/img/2012/1023/00.jpg', style: 'max-width: 200px; height: auto;') %>
         <div data-toggle="buttons">
           <label class="btn btn-sky text-uppercase span4">
             <input type="radio" name="book_<%=book_num%>" value="like" class="btn ">好き
           </label>
-          <label class="btn btn-sky text-uppercase span4">
+          <label class="btn btn-hot text-uppercase span4">
             <input type="radio" name="book_<%=book_num%>" value="dislike" class="btn ">嫌い
           </label>
-          <label class="btn btn-hot text-uppercase span4 active">
+          <label class="btn text-uppercase span4 active">
             <input type="radio" name="book_<%=book_num%>" value="none" class="btn ">読んでいない
           </label>
         </div>

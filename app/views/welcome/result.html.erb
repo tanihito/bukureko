@@ -7,14 +7,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>ちはやふる</td>
-        <td><%= image_tag('http://yuzuya.style.coocan.jp/blog/img/2012/1023/00.jpg', size: '100x100') %></td>
-      </tr>
-      <tr>
-    　　<td>ワンピース</td>
-      　<td><%= image_tag('http://img.bookstore.c.yimg.jp/im_sigg_J7fYzJMVZ.yFNva5kSVRg---x200/ebook/db/8f/db8f2b5cdfb8fd4c514fe85a50c410cc0001_cover.jpg?db8f2b5cdfb8fd4c514fe85a50c410cc', size: '100x100') %></td></td>
-      </tr>
+      <% @result_books.each do |result| %>
+        <tr>
+          <td><%= @books[result][:name] %></td>
+          <td><%= image_tag(@books[result][:url], size: '100x100') %></td>
+        </tr>
+      <% end %>
     </tbody>
   </table>
   <form action="./result" method="post">
