@@ -1,17 +1,20 @@
 <h3>好きな本を選んでください</h3>
+<form action="./result" method="post">
+<% book_num = 0 %>
 <% 2.times.each do %>
   <div class="row">
     <% 4.times.each do %>
       <div class="col-md-3" style="text-align:center">
         <%= image_tag('http://yuzuya.style.coocan.jp/blog/img/2012/1023/00.jpg', style: 'max-width: 200px; height: auto;') %>
         <br>ちはやふる<br>
-        <div style="span:10px" class="btn-group" data-toggle="buttons-radio">
-          <button type="button" class="btn btn-info">好き</button>
-          <button type="button" class="btn btn-info">嫌い</button>
-          <button type="button" class="btn btn-info">読んでない</button>
+        <div id="book_<%= book_num = book_num + 1 %>" style="span:10px" class="btn-group" data-toggle="buttons-radio">
+          <button type="radio" class="btn btn-info">好き</button>
+          <button type="radio" class="btn btn-info">嫌い</button>
+          <button type="radio" class="btn btn-info">読んでない</button>
         </div>
       </div>
     <% end %>
   </div>
 <% end %>
-<button onclick="location.href='index2.html'" type="button" class="btn btn-danger">次へ</button>
+<button type="submit" class="btn btn-danger">次へ</button>
+</form>
