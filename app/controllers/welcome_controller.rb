@@ -3,10 +3,6 @@ class WelcomeController < ApplicationController
   end
 
   def result
-    params[:book1] = 'like'
-    params[:book2] = 'like'
-    params[:book3] = 'like'
-
     @books = [
       {name: 'ちはやふる', url: 'http://yuzuya.style.coocan.jp/blog/img/2012/1023/00.jpg'},
       {name: 'ワンピース', url: 'http://img.bookstore.c.yimg.jp/im_sigg_J7fYzJMVZ.yFNva5kSVRg---x200/ebook/db/8f/db8f2b5cdfb8fd4c514fe85a50c410cc0001_cover.jpg?db8f2b5cdfb8fd4c514fe85a50c410cc'},
