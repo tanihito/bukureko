@@ -7,11 +7,9 @@ gem 'rails', '3.2.21'
 
 gem 'bootstrap-sass', '~> 3.3.4'
 
-group :test do
-  gem 'pry'
-  gem 'pry-nav'
-  gem 'pry-rails'
-end
+gem 'pry'
+gem 'pry-nav'
+gem 'pry-rails'
 
 group :test, :development do
   gem 'sqlite3'

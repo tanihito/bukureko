@@ -7,10 +7,11 @@
       </tr>
     </thead>
     <tbody>
-      <% @result_books.each do |result| %>
+      <% @result_books.each do |result_book_name| %>
         <tr>
-          <td><%= @books[result][:name] %></td>
-          <td><%= image_tag(@books[result][:url], size: '100x100') %></td>
+          <td><%= result_book_name %></td>
+
+          <td><%= image_tag(@books.find { |item| item[:name] == result_book_name}[:url], size: '100x100') %></td>
         </tr>
       <% end %>
     </tbody>

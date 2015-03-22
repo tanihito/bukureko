@@ -1,10 +1,18 @@
 ---
+P4G_banner.jpg: P4G_banner-2b6b71b9df534f55010df039a83f774d.jpg
+P4G_banner/index.jpg: P4G_banner-2b6b71b9df534f55010df039a83f774d.jpg
+favicon.gif: favicon-3466176b40d6399525db7b65480c4226.gif
+favicon/index.gif: favicon-3466176b40d6399525db7b65480c4226.gif
+logo.gif: logo-f979edeb1120b6d494279baad5d0e828.gif
+logo/index.gif: logo-f979edeb1120b6d494279baad5d0e828.gif
+miku_banner.jpg: miku_banner-7a58ae380ce0279c4d4e5f01b2410317.jpg
+miku_banner/index.jpg: miku_banner-7a58ae380ce0279c4d4e5f01b2410317.jpg
 rails.png: rails-71e944d9b39043eba50b77788c0d767f.png
 rails/index.png: rails-71e944d9b39043eba50b77788c0d767f.png
 application.js: application-f5df3b0c0172ef210733e71463a5051a.js
 application/index.js: application-f5df3b0c0172ef210733e71463a5051a.js
-application.css: application-2e9dce96a04cc8613a3a28b26d61fb94.css
-application/index.css: application-2e9dce96a04cc8613a3a28b26d61fb94.css
+application.css: application-a7700289dcf579df86a451e3a66a6166.css
+application/index.css: application-a7700289dcf579df86a451e3a66a6166.css
 jquery.min.map: jquery.min-c5a89be96c8d2def857e2657b2c155c0.map
 jquery/index.min.map: jquery.min-c5a89be96c8d2def857e2657b2c155c0.map
 bootstrap/glyphicons-halflings-regular.eot: bootstrap/glyphicons-halflings-regular-a2d14623de76773922e04feabbb8f1ec.eot

@@ -1,6 +1,10 @@
-<h3>好きな本を選んでください</h3>
+<div class="text-center">
+  <img src="/assets/logo.gif" class: "img-responsive"/>
+  <h2>あなたの知らない、あなたの好きなマンガを紹介します</h2>
+</div>
 
 <form action="./result" method="post" role="form">
+  <h3>1. 好きな本を選んでください</h3>
   <% book_num = 0 %>
   <% 2.times.each do %>
     <div class="row">
@@ -27,6 +31,24 @@
       <% end %>
     </div>
   <% end %>
+
+  <h3>2. オススメしたい本を選んで入力してください</h3>
+  <div>
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">1冊目</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="recommended-book1">
+    </div>
+    <label for="inputEmail3" class="col-sm-2 control-label">2冊目</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="recommended-book2">
+    </div>
+    <label for="inputEmail3" class="col-sm-2 control-label">3冊目</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="recommended-book3">
+    </div>
+  </div>
+  <div>
 
   <div class="row">
     <input type="submit" class="col-md-offset-4 col-md-4 btn-lg btn-primary" value="次へ" />
