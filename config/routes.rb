@@ -1,6 +1,8 @@
 Bukureco::Application.routes.draw do
   match '/welcome/index', :controller => :welcome, :action => :index
+  match '/welcome/save', :controller => :welcome, :action => :save
   match '/welcome/result', :controller => :welcome, :action => :result
+  match '/welcome/mypage', :controller => :welcome, :action => :mypage
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
