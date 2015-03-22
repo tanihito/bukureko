@@ -1,27 +1,25 @@
 <h3>貴方へのオススメ！</h3>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>タイトル</th>
-        <th>画像</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @result_books.each do |result_book_name| %>
-        <% book_url = @books.find { |item| item[:name] == result_book_name }.try(:[], :url) %>
-        <tr>
-          <td><%= result_book_name %></td>
-          <td>
-            <% if book_url.present? %>
-              <%= image_tag(@books.find { |item| item[:name] == result_book_name}[:url], size: '100x100') %>
-            <% end %>
-          </td>
-
-        </tr>
+<div class="row">
+  <% @result_books.each do |result_book_name| %>
+    <% book_url = @books.find { |item| item[:name] == result_book_name }.try(:[], :url) %>
+    <div class="col-md-4 text-center content-center centered">
+      <% if book_url.present? %>
+        <%= image_tag(book_url) %>
       <% end %>
-    </tbody>
-  </table>
+    </div>
+  <% end %>
+</div>
+
+<div class="row" style="margin-top: 15px;">
+  <div class="col-md-offset-3 col-md-3">
   <form action="./result" method="post">
-    <button type="submit" class="btn btn-danger">別のオススメを見る</button>
+    <input type="hidden" name="book1" value="like">
+    <input type="hidden" name="book2" value="like">
+    <input type="hidden" name="book3" value="like">
+    <button type="submit" class="btn-lg btn-primary">別のオススメを見る</button>
   </form>
-  <button onclick="location.href='index.html'" type="button" class="btn btn-danger">データを保存する</button>
+  </div>
+  <div class="col-md-3">
+    <button onclick="location.href='index.html'" type="button" class="btn-lg btn-primary">データを保存する</button>
+  </div>
+</div>
