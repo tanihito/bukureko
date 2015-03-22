@@ -72,14 +72,16 @@ class WelcomeController < ApplicationController
       {name: 'ただいま王子製造中', url: 'https://pbs.twimg.com/media/ByQzL94CEAIuVnC.jpg:large'},
       {name: 'サトラレ', url: 'http://ecx.images-amazon.com/images/I/510C7JQ5E5L._SY344_BO1,204,203,200_.jpg'},
       {name: 'サムライ刑事', url: 'http://img.7netshopping.jp/bks/images/i4/07118042.JPG'},
-      {name: 'サヤビト', url: 'http://img.7netshopping.jp/bks/images/i1/1106005241.jpg'}
+      {name: 'サヤビト', url: 'http://img.7netshopping.jp/bks/images/i1/1106005241.jpg'},
+      {name: 'ダイヤのA', url: 'http://thumbnail.image.rakuten.co.jp/@0_mall/ryusei/cabinet/02768376/comic01/img60424985.jpg?_ex=300x300&s=1&r=1'},
+      {name: '7SEEDS', url: 'http://img.7netshopping.jp/bks/images/b7/08245531.jpg'},
     ]
 
     book_hash = Hash.new do |hash, key|
       hash[key] = Hash.new(&hash.default_proc)
     end
     book_hash['like']['like']['like']          = ['To LOVEる','らんま1/2','NANA']
-    book_hash['like']['like']['dislike']       = ['ときめきトゥナイト','青空エール','青空エール']
+    book_hash['like']['like']['dislike']       = ['ダイヤのA','7SEEDS','ダイの大冒険']
     book_hash['like']['like']['none']          = ['黒執事','君に届け','姉の結婚']
     book_hash['like']['dislike']['like']       = ['ハンターハンター','スラムダンク','銀魂']
     book_hash['like']['dislike']['dislike']    = ['銀魂','きみのいる町','キャッツアイ']
