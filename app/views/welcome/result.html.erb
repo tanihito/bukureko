@@ -8,10 +8,15 @@
     </thead>
     <tbody>
       <% @result_books.each do |result_book_name| %>
+        <% book_url = @books.find { |item| item[:name] == result_book_name }.try(:[], :url) %>
         <tr>
           <td><%= result_book_name %></td>
+          <td>
+            <% if book_url.present? %>
+              <%= image_tag(@books.find { |item| item[:name] == result_book_name}[:url], size: '100x100') %>
+            <% end %>
+          </td>
 
-          <td><%= image_tag(@books.find { |item| item[:name] == result_book_name}[:url], size: '100x100') %></td>
         </tr>
       <% end %>
     </tbody>
