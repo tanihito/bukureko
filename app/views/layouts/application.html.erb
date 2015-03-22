@@ -8,6 +8,7 @@
   <%= stylesheet_link_tag "custom", :media => "all" %>
 </head>
 <body>
+
 <nav class="navbar navbar-default navbar-inverse" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -21,9 +22,28 @@
     </div>
   </div>
 </nav>
+
 <div class="container">
 <%= yield %>
 </div>
 
+<footer class="footer" style="margin-top: 50px;">
+  <div class="container">
+    <div class="row">
+      <a class="col-md-3" href="">
+        <img src="http://www.kodansha.co.jp/upload/pr.kodansha.co.jp/images/banner/banner.gif" alt="講談社広告賞" class="img-responsive">
+      </a>
+      <a class="col-md-3" href="http://www.bookclub.kodansha.co.jp/">
+        <img src="http://www.kodansha.co.jp/upload/pr.kodansha.co.jp/images/cojp_bookclub.gif" alt="ＢＯＯＫ倶楽部" class="img-responsive">
+      </a>
+      <a class="col-md-3" href="http://kc.kodansha.co.jp/">
+        <img src="http://www.kodansha.co.jp/upload/pr.kodansha.co.jp/images/comicplus.jpg" alt="コミックプラス" class="img-responsive">
+      </a>
+      <a class="col-md-3" href="http://corp.kodansha.co.jp/kids/ohanashi/">
+        <img src="http://www.kodansha.co.jp/upload/pr.kodansha.co.jp/images/ohanasshitai.gif" alt="おはなし隊" class="img-responsive">
+      </a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
