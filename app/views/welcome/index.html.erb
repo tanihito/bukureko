@@ -9,10 +9,9 @@
   <% 2.times.each do %>
     <div class="row">
       <% 4.times.each do %>
-        <% book_num += 1 %>
-        <div class="col-md-3" class="form-group">
+        <div class="col-md-3" class="form-group" style="text-align: center">
           <label for="book<%=book_num%>" class="control-label">
-            <%= image_tag('http://yuzuya.style.coocan.jp/blog/img/2012/1023/00.jpg', class: "img-responsive") %>
+            <%= image_tag(@books[book_num][:url], style: "max-height: 240px") %>
           </lavel>
           <div class="text-center" style="margin-top: 5px;margin-bottom: 10px">
             <div data-toggle="buttons" class="btn-group">
@@ -28,6 +27,7 @@
             </div>
           </div>
         </div>
+        <% book_num += 1 %>
       <% end %>
     </div>
   <% end %>

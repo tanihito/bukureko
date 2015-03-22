@@ -1,5 +1,15 @@
 class WelcomeController < ApplicationController
   def index
+    @books = [
+      {name: 'ちはやふる', url: 'http://yuzuya.style.coocan.jp/blog/img/2012/1023/00.jpg'},
+      {name: 'ワンピース', url: 'http://blog-imgs-46.fc2.com/c/h/i/chicachica555/20110804-00000009-mantan-000-1-view.jpg'},
+      {name: '名探偵コナン', url: 'http://blog-imgs-46.fc2.com/2/c/h/2chnokakera/conan.jpeg'},
+      {name: 'クレヨンしんちゃん', url: 'http://www.futabasha.co.jp/assets/cover/book/ISBN978-4-575-94354-2.jpg'},
+      {name: '黒執事', url: 'http://www.mandarake.co.jp/information/2008/10/27/21cmp06/p3.jpg'},
+      {name: 'けいおん! ', url: 'http://ecx.images-amazon.com/images/I/51d9KYJfh6L.jpg'},
+      {name: 'ゲゲゲの鬼太郎 ', url: 'http://happysad.img.jugem.jp/20070322_299762.jpg'},
+      {name: '黒執事', url: 'http://cdn.kdkw.jp/cover_b/200509/200509000079.jpg'}
+    ]
   end
 
   def result
@@ -96,6 +106,6 @@ class WelcomeController < ApplicationController
     book_hash['none']['none']['dislike']       = ['うる星やつら','惡の華','カーテンコール']
     book_hash['none']['none']['none']          = ['ちはやふる','キャッツアイ','コブラ']
 
-    @result_books = book_hash[params[:book1]][params[:book2]][params[:book3]]
+    @result_books = book_hash[params[:book0]][params[:book1]][params[:book2]]
   end
 end
